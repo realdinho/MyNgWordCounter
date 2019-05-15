@@ -1,0 +1,44 @@
+<h1>
+  {{ title }}
+</h1>
+
+<div>
+
+  <form [formGroup]="myForm" >
+    
+    <fieldset>
+      <div>
+        <label>Write something:</label>
+        <div>
+          <textarea name="inputText" rows="3"  formControlName="inputText">          
+          </textarea>
+        </div>
+      </div>
+
+      <div>
+        Number of words: {{wordsQuantity}}
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <div>
+        <label>URL:</label>
+
+        <div >
+          <input type="text" name="url" placeholder="url" formControlName="url">
+        </div>
+      </div>
+
+      <p>{{textOut}}</p>
+
+      <div>
+        Number of "text_out" found: {{textOutQuantity}}
+      </div>
+    </fieldset>    
+  </form>
+
+  <button type="submit"  (click)="submitText()">Submit</button>
+
+</div>
+
+<router-outlet></router-outlet>

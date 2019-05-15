@@ -1,0 +1,31 @@
+.angular-rective-form 
+{
+    display: block;
+}
+
+.label 
+{
+    padding-right: 0px;
+}
+
+.input 
+{
+    padding-left: 0px;
+}
+
+.input-container 
+{
+
+}
+
+.submit 
+{
+    float: right;
+    padding-top: 10px;
+}
+
+.inner-container 
+{
+    padding: 20px;
+    border: solid 1px #dee2e6;
+}
