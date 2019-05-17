@@ -1,43 +1,35 @@
-<h1>
-  {{ title }}
-</h1>
+<div class="title">
+  <label>{{ title }}</label>
+</div>
 
-<div>
+<div class="containerDiv">
 
-  <form [formGroup]="myForm" >
+  <div class="myformDiv">
+    <form [formGroup]="myForm">
+
+      <div class="textDiv">
+        <textarea rows="5" formControlName="inputText" placeholder="Insert a text"></textarea>
+
+        <label class="errorMessage" *ngIf="!myForm.controls.inputText.valid  && (inputText || submitAttempt)">{{errorMsgText}}</label>
+        <label *ngIf="formValid">{{wordsQuantity}} words</label>
+      </div>
     
-    <fieldset>
-      <div>
-        <label>Write something:</label>
-        <div>
-          <textarea name="inputText" rows="3"  formControlName="inputText">          
-          </textarea>
+      <div class="urlInputDiv">
+        <input type="url" name="url" placeholder="Insert a URL" formControlName="inputUrl" class="inputUrl">
+
+        <div *ngIf="formValid" class="textOutDiv">{{errorMsg}} {{textOut}}</div>
+
+        <div class="urlMsgDiv">
+          <label class="errorMessage" *ngIf="!myForm.controls.inputUrl.valid  && (inputUrl || submitAttempt)">{{errorMsgUrl}}</label>
+          <label *ngIf="formValid">{{textOutQuantity}} words</label>
         </div>
-      </div>
+    </div>
+    </form>
+  </div>
 
-      <div>
-        Number of words: {{wordsQuantity}}
-      </div>
-    </fieldset>
-
-    <fieldset>
-      <div>
-        <label>URL:</label>
-
-        <div >
-          <input type="text" name="url" placeholder="url" formControlName="url">
-        </div>
-      </div>
-
-      <p>{{textOut}}</p>
-
-      <div>
-        Number of "text_out" found: {{textOutQuantity}}
-      </div>
-    </fieldset>    
-  </form>
-
-  <button type="submit"  (click)="submitText()">Submit</button>
+  <div class="buttonDiv">
+      <button type="submit" (click)="submitText()" class="buttonSubmit">Submit</button>
+  </div>
 
 </div>
 

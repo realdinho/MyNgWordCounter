@@ -1,4 +1,24 @@
-.angular-rective-form 
+
+.containerDiv
+{
+    margin: 0 auto;
+    width: 90%;
+    background-color: #99bbdd;
+    border-radius: 25px;
+}
+
+.title
+{
+    margin: 0 auto;
+    width: 500px;
+    margin-top: 7%;
+    margin-bottom: 4%;
+    font-family: fantasy;
+    font-size: 18pt;
+    color: #2e4052;
+}
+
+.myformDiv 
 {
     display: block;
 }
@@ -8,24 +28,58 @@
     padding-right: 0px;
 }
 
-.input 
+textarea
 {
-    padding-left: 0px;
+    margin: 0 auto;
+    width: 100%;
+    height: 200px;
+    margin-top: 25px;
+    border-radius: 10px;
 }
 
-.input-container 
+.textDiv
 {
-
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 25px;
+    display: block;
 }
 
-.submit 
+.urlInputDiv
 {
-    float: right;
-    padding-top: 10px;
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 25px;
+    display: block;
 }
 
-.inner-container 
+input
 {
-    padding: 20px;
-    border: solid 1px #dee2e6;
+    margin: 0 auto;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.errorMessage
+{
+    color: red;
+    font-size: 12px;
+}
+
+.buttonDiv
+{
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 25px;
+}
+
+button 
+{
+    margin: 0 auto;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background-color: #057777;
 }

@@ -9,9 +9,7 @@ export class CounterService
 {
   responses: Array<Response>;
 
-  constructor(
-    //private response: Response
-  ) 
+  constructor() 
   { 
     this.responses = new Array();
   }
@@ -23,7 +21,7 @@ export class CounterService
     text = text.replace(/[ ]{2,}/gi, ' '); // convert 2 or more spaces to 1
     text = text.replace(/\r /, '');
     
-    // query inserted text
+    // check if the text was already inserted
     let query = this.responses.find(res => res.text === text);
     
     if(!query) // if text does not exist
@@ -32,9 +30,6 @@ export class CounterService
       let newResponse = new Response();
       newResponse.text = text;
       newResponse.wordsQuantity = text.split(' ').length;
-
-      console.log(text);
-      console.log(newResponse);
 
       this.responses.push(newResponse); // save response object
 
